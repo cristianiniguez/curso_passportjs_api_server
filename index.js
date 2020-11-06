@@ -1,29 +1,35 @@
-const express = require('express')
+const express = require('express');
 
-const app = express()
+const app = express();
 
-const { config } = require('./config/index')
+const { config } = require('./config/index');
 
-const moviesApi = require('./routes/movies')
+const moviesApi = require('./routes/movies');
+const userMoviesApi = require('./routes/userMovies');
 
-const { logErrors, errorhandler, wrapErrors } = require('./utils/middleware/errorHandlers')
+const {
+  logErrors,
+  errorhandler,
+  wrapErrors,
+} = require('./utils/middleware/errorHandlers');
 
-const notFoundHandler = require('./utils/middleware/notFoundHandler')
+const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // body parser
-app.use(express.json())
+app.use(express.json());
 
 // routes
-moviesApi(app)
+moviesApi(app);
+userMoviesApi(app);
 
 // Catch 404
-app.use(notFoundHandler)
+app.use(notFoundHandler);
 
 // Errors middleware
-app.use(logErrors)
-app.use(wrapErrors)
-app.use(errorhandler)
+app.use(logErrors);
+app.use(wrapErrors);
+app.use(errorhandler);
 
 app.listen(config.port, function () {
-  console.log(`Listening http://localhost:${config.port}`)
-})
+  console.log(`Listening http://localhost:${config.port}`);
+});
