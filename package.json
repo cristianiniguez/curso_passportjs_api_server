@@ -1,8 +1,7 @@
 {
-  "name": "curso_passport",
+  "name": "curso_passport_api_server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API Server desarrollado en el Curso de Autenticación con Passport.js de Platzi",
   "scripts": {
     "dev": "cross-env DEBUG=app:* nodemon index",
     "start": "cross-env NODE_ENV=production node index",
@@ -71,5 +70,13 @@
   "directories": {
     "lib": "lib",
     "test": "test"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianiniguez/curso_passportjs_api_server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cristianiniguez/curso_passportjs_api_server/issues"
+  },
+  "homepage": "https://github.com/cristianiniguez/curso_passportjs_api_server#readme"
 }
