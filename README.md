@@ -9,3 +9,5 @@ API Server desarrollado en el [Curso de Autenticación con Passport.js](https://
 Mis apuntes: https://www.notion.so/Curso-de-Autenticaci-n-con-Passport-js-76ddc46948be4da2be218b37591d9a5c
 
 Render Server: https://github.com/cristianiniguez/curso_passportjs_render_server
+
+Depliegue en vercel: https://platzivideo-criniguez-api.vercel.app
